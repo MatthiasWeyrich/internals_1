@@ -20,24 +20,21 @@ function checkFailed() {
 function checkStaffCred() {
     const staffPassword = document.getElementById("stPassword").value
     const staffUsername = document.getElementById("stUsername").value
-    if(staffUsername == staffCred && staffPassword == staffCred && staffLoginFailed < 3) {
-        alert("yay")
-    } else {
+    if(!(staffUsername == staffCred && staffPassword == staffCred && staffLoginFailed < 3)) {
         checkFailed()
         alert(errorMsg)
+        return false
     }
+    return true
 }
 
 function checkAdminCred() {
     const adminPassword = document.getElementById("adPassword").value
     const adminUsername = document.getElementById("adUsername").value
-    if(adminLoginFailed >= 3) {
-        alert("Three Login attempts failed")
-        return false;
-    }
-    else if(adminUsername == adminCred && adminPassword == adminCred) {
-        alert("yay")
-    } else {
+    if(!(adminUsername == adminCred && adminPassword == adminCred)) {
+        checkFailed()
         alert(errorMsg)
+        return false
     }
+    return true
 }

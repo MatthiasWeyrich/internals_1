@@ -8,7 +8,7 @@
 
     <body>
         <div>
-            <form id="adminLogin" onsubmit="checkAdminCred()">
+            <form id="adminLogin" onsubmit="return checkAdminCred()" action="admin.html">
                 <h2>Admin Login</h2>
                 <input type="text" placeholder="Username" id="adUsername">
                 <input type="password" placeholder="Password" id="adPassword">
@@ -17,7 +17,7 @@
         </div>
 
         <div>
-            <form id="staffLogin" onsubmit="checkStaffCred()">
+            <form id="staffLogin" onsubmit="return checkStaffCred()">
                 <h2>Staff Login</h2>
                 <input type="text" placeholder="Username" id="stUsername">
                 <input type="password" placeholder="Password" id="stPassword">
