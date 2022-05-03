@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="login.css">
+        <script defer src="login.js"></script>
+        <center><h1>Web Development Internals 1</h1></center>
+    </head>
+
+    <body>
+        <div>
+            <form id="adminLogin" onsubmit="checkAdminCred()">
+                <h2>Admin Login</h2>
+                <input type="text" placeholder="Username" id="adUsername">
+                <input type="password" placeholder="Password" id="adPassword">
+                <input type="submit" value="Login" id="adLogin">
+            </form>
+        </div>
+
+        <div>
+            <form id="staffLogin" onsubmit="checkStaffCred()">
+                <h2>Staff Login</h2>
+                <input type="text" placeholder="Username" id="stUsername">
+                <input type="password" placeholder="Password" id="stPassword">
+                <input type="submit" value="Login" id="stLogin">
+            </form>
+        </div> 
+    </body>
+</html>
