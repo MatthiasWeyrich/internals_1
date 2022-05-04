@@ -20,7 +20,7 @@ function checkFailed() {
 function checkStaffCred() {
     const staffPassword = document.getElementById("stPassword").value
     const staffUsername = document.getElementById("stUsername").value
-    if(!(staffUsername == staffCred && staffPassword == staffCred && staffLoginFailed < 3)) {
+    if(!(staffUsername == staffCred && staffPassword == staffCred)) {
         checkFailed()
         alert(errorMsg)
         return false
