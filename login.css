@@ -1,3 +1,20 @@
 h1 {
     background-color: lightblue;
 }
+
+.adminLogin {
+    display: inline-block;
+    background-color: lightblue;
+    margin-left: 600px;
+    margin-right: 100px;
+    width: 300px;
+    height: 200px;
+}
+
+.staffLogin {
+    display: inline-block;
+    background-color: lightblue;
+    width: 250px;
+    height: 150px;
+    border: 15px darkturquoise;
+}

@@ -3,12 +3,12 @@
     <head>
         <link rel="stylesheet" href="login.css">
         <script defer src="login.js"></script>
-        <center><h1>Web Development Internals 1</h1></center>
+        <h1>Web Development Internals 1</h1>
     </head>
 
     <body>
-        <div>
-            <form id="adminLogin" onsubmit="return checkAdminCred()" action="admin.html">
+        <div class="adminLogin">
+            <form onsubmit="return checkAdminCred()" action="admin.html">
                 <h2>Admin Login</h2>
                 <input type="text" placeholder="Username" id="adUsername">
                 <input type="password" placeholder="Password" id="adPassword">
@@ -16,8 +16,8 @@
             </form>
         </div>
 
-        <div>
-            <form id="staffLogin" onsubmit="return checkStaffCred()" action="staff.html">
+        <div class="staffLogin">
+            <form onsubmit="return checkStaffCred()" action="staff.html">
                 <h2>Staff Login</h2>
                 <input type="text" placeholder="Username" id="stUsername">
                 <input type="password" placeholder="Password" id="stPassword">
