@@ -17,33 +17,36 @@ function checkFailed() {
     }
 }
 
+function filter() {
+    const students = Array.from(document.querySelectorAll(".entry"))
+    const fb = document.getElementById("FB").value
+    const sem = document.getElementById("sem").value
+    students.forEach(student => student.style.display = "")
+    students.filter(student => {
+            const month = new Date(student.querySelectorAll("td")[4].textContent).getMonth()
+            const summer = sem == "Summer"
+            return student.querySelectorAll("td")[6].textContent != fb || (month >= 4 && month <= 9) != summer})
+            .forEach(student => student.style.display = "none")
+
+}
+
+function validDate() {
+    yesterday = new Date(Date.now() - 854e5).toISOString().split("T") [0]
+    document.getElementById("DOB").setAttribute("max", yesterday)
+    document.getElementById("joiningDate").setAttribute("min", "2015-01-01")
+    document.getElementById("joiningDate").setAttribute("max", "2015-12-31")    
+}
+
 function checkAge() {
     const dob = document.getElementById("DOB").value
     const date = new Date(dob)
     const currentDate = Date.now()
     const age = (currentDate - date) / (31557600000)
-    const join = checkJoin()
-    if(!join) {
-        alert("Invalid joining year")
-    } 
-    else if(age < 17 || age > 60) {
+    if(age < 17 || age > 60) {
         alert("Invalid DOB")
     } else {
         window.location.href = "students.html";
-    }   
-}
-
-function checkJoin() {
-    const join = document.getElementById("joiningDate").value
-    const joinDate = new Date(join)
-    joinYear = joinDate.toISOString().split('-')[0]
-
-    if(joinYear != 2015) {
-        return false
-    } else {
-        return true
     }
-
 }
 
 function checkStaffCred() {

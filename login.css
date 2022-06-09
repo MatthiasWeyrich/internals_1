@@ -26,6 +26,23 @@ input[type=text], input[type=password] {
     box-sizing: content-box;
 }
 
+input[type=date] {
+    width: 50%;
+    display: inline-block;
+    margin:2%;
+    padding: 3% 5%;
+    box-sizing: content-box;
+}
+
+label {
+    width: 50%;
+    display: inline-block;
+    margin:2%;
+    padding: 3% 5%;
+    box-sizing: content-box;
+}
+
+
 input[type=submit] {
     padding: 3% 4%;
     margin: 2%;

@@ -7,7 +7,7 @@
         <h2>Course Overview</h2>  
     </head>
     
-    <body>
+    <body onload="validDate()">
         <div id="add">
             <form>
                 <input type="text" placeholder="Student ID">
@@ -15,12 +15,15 @@
                 <input type="text" placeholder="Last Name">
                 <input type="date" id="DOB">
                 <input type="date" id="joiningDate">
-                <input type="radio" name="gender" id="male">
-                <label for="male">Male</label>
+                <label><input type="radio" name="gender" id="male">
+                Male</label>
+                <label>
                 <input type="radio" name="gender" id="female">
-                <label for="male">Female</label>
+                Female</label>
+                <label>
                 <input type="radio" name="gender" id="other">
-                <label for="male">Other</label>
+                Other</label>
+                <br>
                 <select id="FB">
                     <label for="FB">Department</label>
                     <option>FB1</option>

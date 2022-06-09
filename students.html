@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="login.js"></script>
+    </head>
+    <body>
+        <select id="FB" onchange="filter()">
+            <label for="FB">Department</label>
+            <option>FB1</option>
+            <option>FB2</option>
+            <option>FB3</option>
+            <option>FB4</option>
+            <option>FB5</option>
+        </select>
+        <select id="sem" onchange="filter()">
+            <label for="sem">Semester</label>
+            <option>Summer</option>
+            <option>Winter</option>
+        </select>
         <link rel="stylesheet" href="login.css">
         <h1>Web Development Internals 1</h1>
         <h2>All Students</h2>
@@ -15,20 +31,41 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>DOB</th>
+            <th>Joining Date</th>
             <th>Gender</th>
             <th>Department</th>
             <th>Email_ID</th>
         </tr>
-        <tr>
+        <tr class="entry">
             <td>579274</td>
             <td>Matthias</td>
             <td>Weyrich</td>
-            <td>05.05.2001</td>
+            <td>2001-05-05</td>
+            <td>2015-01-01</td>
             <td>male</td>
             <td>FB4</td>
             <td>s0579274@htw-berlin.de</td>
         </tr>
+        <tr class="entry">
+            <td>000000</td>
+            <td>Watthias</td>
+            <td>Meyrich</td>
+            <td>2001-06-05</td>
+            <td>2015-06-01</td>
+            <td>female</td>
+            <td>FB3</td>
+            <td>s000000@htw-berlin.de</td>
+        </tr>
+        <tr class="entry">
+            <td>000000</td>
+            <td>Weyrias</td>
+            <td>Mattrich</td>
+            <td>2001-07-05</td>
+            <td>2015-12-01</td>
+            <td>male</td>
+            <td>FB1</td>
+            <td>s000000@htw-berlin.de</td>
+        </tr>
         </table>
-    </head>
-    
+    </body>
 </html>
