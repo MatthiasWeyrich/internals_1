@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="login.css">
+        <script defer src="login.js"></script>
         <h1>Web Development Internals 1</h1>
         <h2>Course Overview</h2>  
     </head>
@@ -13,6 +14,7 @@
                 <input type="text" placeholder="First Name">
                 <input type="text" placeholder="Last Name">
                 <input type="date" id="DOB">
+                <input type="date" id="joiningDate">
                 <input type="radio" name="gender" id="male">
                 <label for="male">Male</label>
                 <input type="radio" name="gender" id="female">
@@ -28,9 +30,7 @@
                     <option>FB5</option>
                 </select>  
             </form>
-            <a href="students.html">
-                <button id="add">Add</button>
-            </a> 
+            <button id="add" onclick="checkAge()">Add</button> 
         </div>
     </body>
 </html>
